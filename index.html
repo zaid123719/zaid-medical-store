@@ -3,131 +3,1437 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zaid Medical Store</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+ 
+<!-- ===================== SEO ===================== -->
+<title>Zaid Medical Stores | Trusted Medical Store in Khandwa</title>
+<meta name="description" content="Zaid Medical Stores in Khandwa provides genuine medicines, healthcare essentials, prescription support, WhatsApp medicine availability check, and local pharmacy support.">
+<meta name="keywords" content="medical store Khandwa, pharmacy Khandwa, Zaid Medical Stores, medicines Khandwa, prescription delivery Khandwa">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://zaid123719.github.io">
+<meta property="og:title" content="Zaid Medical Stores | Trusted Medical Store in Khandwa">
+<meta property="og:description" content="Genuine medicines, healthcare essentials, prescription support and WhatsApp ordering in Khandwa, Madhya Pradesh.">
+<meta property="og:type" content="business.business">
+<meta property="og:url" content="https://zaid123719.github.io">
+ 
+<!-- ===================== STRUCTURED DATA (SEO) ===================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Pharmacy",
+  "name": "Zaid Medical Stores",
+  "telephone": "+91 78058 33161",
+  "url": "https://zaid123719.github.io",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Nagchoon Rd, Gulshan Nagar, Kasal Pura",
+    "addressLocality": "Khandwa",
+    "addressRegion": "Madhya Pradesh",
+    "postalCode": "450001",
+    "addressCountry": "IN"
+  }
+}
+</script>
+ 
+<!-- ===================== FAVICON (inline SVG, no extra file) ===================== -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232557D6'/%3E%3Crect x='27' y='14' width='10' height='36' rx='3' fill='white'/%3E%3Crect x='14' y='27' width='36' height='10' rx='3' fill='white'/%3E%3C/svg%3E">
+ 
+<!-- ===================== FONTS ===================== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@500;700&display=swap" rel="stylesheet">
+ 
+<!-- ===================== ICONS ===================== -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+ 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:#f8fafc;color:#0f172a;}
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 50px;
-background:#fff;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
-position:sticky;
-top:0;
+/* =====================================================================
+   1. RESET & BASE
+   ===================================================================== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--mist);
+  color:var(--ink);
+  line-height:1.6;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
 }
-
-.logo{font-size:22px;font-weight:700;color:#0a7cff;}
-
-.hero{
-height:90vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:linear-gradient(135deg,#0a7cff,#00c6ff);
-color:#fff;
+img,svg{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;}
+input,textarea{font-family:inherit;font-size:1rem;}
+section{position:relative;}
+ 
+/* =====================================================================
+   2. DESIGN TOKENS
+   ===================================================================== */
+:root{
+  --mist:#F3F7FB;
+  --mist-deep:#E9F0F8;
+  --white:#FFFFFF;
+  --ink:#11182B;
+  --slate:#5B6577;
+  --slate-light:#8C96A8;
+ 
+  --blue:#2557D6;
+  --blue-dark:#173B96;
+  --teal:#0EA39B;
+  --mint:#34D399;
+  --cyan:#22D3EE;
+ 
+  --glass-bg:rgba(255,255,255,0.55);
+  --glass-bg-strong:rgba(255,255,255,0.78);
+  --glass-border:rgba(255,255,255,0.65);
+  --glass-shadow:0 8px 30px rgba(17,24,43,0.08);
+  --glass-shadow-lift:0 24px 48px rgba(17,24,43,0.16);
+ 
+  --radius-lg:28px;
+  --radius-md:20px;
+  --radius-sm:14px;
+  --radius-pill:999px;
+ 
+  --container:1180px;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --nav-h:84px;
 }
-
-.hero h1{font-size:48px;margin-bottom:10px;}
-.hero p{margin-bottom:20px;}
-
+ 
+/* =====================================================================
+   3. TYPOGRAPHY
+   ===================================================================== */
+h1,h2,h3,h4{
+  font-family:'Sora',sans-serif;
+  color:var(--ink);
+  letter-spacing:-0.01em;
+  line-height:1.15;
+}
+h1{font-weight:800;}
+h2{font-weight:700;}
+h3{font-weight:700;}
+p{color:var(--slate);}
+ 
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-family:'Space Mono',monospace;
+  font-size:0.72rem;
+  font-weight:600;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--blue);
+  background:rgba(37,87,214,0.08);
+  border:1px solid rgba(37,87,214,0.16);
+  padding:7px 16px;
+  border-radius:var(--radius-pill);
+  margin-bottom:18px;
+}
+.eyebrow i{font-size:0.7rem;}
+.eyebrow.quiet{color:var(--slate);background:rgba(91,101,119,0.08);border-color:rgba(91,101,119,0.16);}
+ 
+.section-head{max-width:640px;margin-bottom:52px;}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+.section-head h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:14px;}
+.section-head p{font-size:1.05rem;}
+.section-head.compact{margin-bottom:32px;}
+.section-head.compact h2{font-size:clamp(1.4rem,2.6vw,1.9rem);margin-bottom:10px;}
+.section-head.compact p{font-size:0.95rem;}
+ 
+/* =====================================================================
+   4. LAYOUT UTILITIES
+   ===================================================================== */
+.container{width:100%;max-width:var(--container);margin:0 auto;padding:0 24px;}
+.section-pad{padding:104px 0;}
+.section-pad.tight{padding:72px 0;}
+@media(max-width:768px){.section-pad{padding:72px 0;}.section-pad.tight{padding:52px 0;}}
+ 
+.grid{display:grid;gap:24px;}
+.grid-2{grid-template-columns:1fr 1fr;}
+.grid-3{grid-template-columns:repeat(3,1fr);}
+.grid-4{grid-template-columns:repeat(4,1fr);}
+@media(max-width:980px){
+  .grid-4{grid-template-columns:repeat(2,1fr);}
+  .grid-3{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:640px){
+  .grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}
+}
+ 
+.glow{position:absolute;border-radius:50%;filter:blur(70px);z-index:0;pointer-events:none;}
+.divider-dashed{border:none;height:0;border-top:1px dashed rgba(91,101,119,0.22);max-width:var(--container);margin:0 auto;}
+ 
+/* =====================================================================
+   5. BUTTONS & BADGES
+   ===================================================================== */
 .btn{
-padding:14px 30px;
-background:#fff;
-color:#0a7cff;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:15px 28px;border-radius:var(--radius-pill);
+  font-weight:600;font-size:0.96rem;white-space:nowrap;
+  transition:transform .35s var(--ease), box-shadow .35s var(--ease), background .35s var(--ease);
 }
-
-.section{padding:70px 50px;text-align:center;}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-margin-top:30px;
+.btn:active{transform:scale(0.97);}
+ 
+.btn-primary{
+  color:#fff;
+  background:linear-gradient(95deg,var(--blue) 42%,var(--teal) 58%);
+  box-shadow:0 10px 24px rgba(37,87,214,0.28);
+  position:relative;overflow:hidden;
 }
-
-.card{
-padding:25px;
-border-radius:15px;
-background:#fff;
-box-shadow:0 10px 25px rgba(0,0,0,0.05);
+.btn-primary::after{
+  content:'';position:absolute;top:0;left:-60%;width:40%;height:100%;
+  background:linear-gradient(115deg,transparent,rgba(255,255,255,0.35),transparent);
+  transform:skewX(-20deg);transition:left .6s var(--ease);
 }
-
-.contact{
-background:linear-gradient(135deg,#0a7cff,#00c6ff);
-color:#fff;
-padding:50px;
-border-radius:20px;
+.btn-primary:hover::after{left:130%;}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(37,87,214,0.36);}
+ 
+.btn-ghost{
+  color:var(--ink);background:var(--glass-bg);border:1px solid var(--glass-border);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
 }
-
-footer{
-text-align:center;
-padding:20px;
-margin-top:40px;
-background:#0f172a;
-color:#fff;
+.btn-ghost:hover{transform:translateY(-3px);background:var(--glass-bg-strong);box-shadow:var(--glass-shadow);}
+ 
+.btn-dark{color:#fff;background:var(--ink);}
+.btn-dark:hover{transform:translateY(-3px);background:#1c2440;}
+ 
+.btn-sm{padding:10px 20px;font-size:0.85rem;}
+.btn-block{width:100%;}
+ 
+.badge-pill{
+  display:inline-flex;align-items:center;gap:8px;padding:10px 18px;
+  border-radius:var(--radius-pill);background:var(--glass-bg);border:1px solid var(--glass-border);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  font-size:0.85rem;font-weight:600;color:var(--ink);box-shadow:var(--glass-shadow);
 }
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-padding:15px;
-border-radius:50%;
-color:#fff;
-text-decoration:none;
-font-size:20px;
+.badge-pill i{color:var(--teal);}
+ 
+/* Status chip with pulsing dot */
+.status-dot{position:relative;width:9px;height:9px;border-radius:50%;background:var(--mint);flex-shrink:0;}
+.status-dot::after{
+  content:'';position:absolute;inset:-5px;border-radius:50%;border:2px solid rgba(52,211,153,0.45);
+  animation:pulse-ring 2.2s ease-out infinite;
 }
-
+ 
+/* =====================================================================
+   6. GLASS CARD COMPONENT
+   ===================================================================== */
+.glass{background:var(--glass-bg);border:1px solid var(--glass-border);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:var(--radius-lg);box-shadow:var(--glass-shadow);}
+.glass-strong{background:var(--glass-bg-strong);border:1px solid var(--glass-border);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-radius:var(--radius-lg);box-shadow:var(--glass-shadow);}
+.card-hover{transition:transform .4s var(--ease), box-shadow .4s var(--ease), border-color .4s var(--ease);}
+.card-hover:hover{transform:translateY(-8px);box-shadow:var(--glass-shadow-lift);border-color:rgba(37,87,214,0.3);}
+ 
+.icon-tile{
+  width:52px;height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,rgba(37,87,214,0.12),rgba(14,163,155,0.12));
+  color:var(--blue);font-size:1.25rem;margin-bottom:18px;
+}
+ 
+/* Reusable chip-grid (accessibility / payment / parking) */
+.chip-grid{display:flex;flex-wrap:wrap;gap:12px;}
+.chip{
+  display:inline-flex;align-items:center;gap:10px;padding:13px 18px;
+  border-radius:var(--radius-pill);background:var(--glass-bg);border:1px solid var(--glass-border);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  font-weight:600;font-size:0.86rem;color:var(--ink);
+  transition:transform .35s var(--ease), box-shadow .35s var(--ease), background .35s var(--ease);
+}
+.chip i{color:var(--blue);font-size:0.95rem;}
+.chip:hover{transform:translateY(-3px);box-shadow:var(--glass-shadow);background:var(--glass-bg-strong);}
+.chip .tag{margin-left:2px;font-size:0.64rem;font-weight:700;letter-spacing:.02em;text-transform:uppercase;padding:3px 9px;border-radius:var(--radius-pill);}
+.chip .tag.free{background:rgba(52,211,153,0.18);color:#0a7a58;}
+.chip .tag.paid{background:rgba(91,101,119,0.14);color:var(--slate);}
+ 
+/* =====================================================================
+   7. NAVBAR
+   ===================================================================== */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 0;transition:padding .4s var(--ease);}
+.navbar-inner{
+  max-width:var(--container);margin:0 auto;padding:14px 22px;
+  display:flex;align-items:center;justify-content:space-between;
+  background:var(--glass-bg);border:1px solid var(--glass-border);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-radius:var(--radius-pill);box-shadow:var(--glass-shadow);
+  transition:background .4s var(--ease), box-shadow .4s var(--ease);
+}
+@media(min-width:769px){.navbar-inner{margin:0 24px;}}
+.navbar.is-scrolled .navbar-inner{background:var(--glass-bg-strong);box-shadow:var(--glass-shadow-lift);}
+ 
+.brand{display:flex;align-items:center;gap:10px;font-family:'Sora',sans-serif;font-weight:700;font-size:1.08rem;color:var(--ink);}
+.brand-mark{position:relative;width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,var(--blue),var(--teal));flex-shrink:0;}
+.brand-mark::before,.brand-mark::after{content:'';position:absolute;background:#fff;border-radius:2px;}
+.brand-mark::before{width:5px;height:18px;top:9px;left:15.5px;}
+.brand-mark::after{width:18px;height:5px;top:15.5px;left:9px;}
+ 
+.nav-links{display:flex;align-items:center;gap:8px;}
+.nav-links a{padding:10px 16px;border-radius:var(--radius-pill);font-size:0.93rem;font-weight:500;color:var(--ink);transition:background .3s var(--ease), color .3s var(--ease);}
+.nav-links a:hover{background:rgba(37,87,214,0.08);color:var(--blue);}
+ 
+.nav-cta{display:flex;align-items:center;gap:12px;}
+.nav-toggle{display:none;width:40px;height:40px;align-items:center;justify-content:center;font-size:1.2rem;border-radius:50%;background:rgba(17,24,43,0.05);}
+ 
+.mobile-panel{
+  display:none;position:fixed;inset:0;z-index:999;background:rgba(243,247,251,0.97);backdrop-filter:blur(20px);
+  flex-direction:column;padding:120px 32px 40px;gap:6px;opacity:0;visibility:hidden;transition:opacity .35s var(--ease);
+}
+.mobile-panel.is-open{opacity:1;visibility:visible;}
+.mobile-panel a{font-family:'Sora',sans-serif;font-size:1.4rem;font-weight:700;padding:14px 4px;border-bottom:1px solid rgba(17,24,43,0.08);}
+.mobile-panel .btn{margin-top:20px;}
+ 
+@media(max-width:860px){
+  .nav-links{display:none;}
+  .nav-cta .btn-primary{display:none;}
+  .nav-toggle{display:flex;}
+  .mobile-panel{display:flex;}
+}
+ 
+/* =====================================================================
+   8. HERO
+   ===================================================================== */
+.hero{padding:calc(var(--nav-h) + 64px) 0 60px;overflow:hidden;}
+.hero .glow-1{width:480px;height:480px;background:var(--blue);opacity:0.16;top:-160px;left:-160px;}
+.hero .glow-2{width:420px;height:420px;background:var(--mint);opacity:0.18;top:60px;right:-140px;}
+ 
+.hero-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center;position:relative;z-index:1;}
+.hero-copy h1{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:20px;}
+.hero-copy h1 span{background:linear-gradient(95deg,var(--blue),var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent;}
+.hero-copy>p{font-size:1.12rem;max-width:520px;margin-bottom:32px;}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:36px;}
+.trust-row{display:flex;flex-wrap:wrap;gap:10px;}
+ 
+.hero-visual{position:relative;height:420px;}
+.hero-visual .glow-3{width:320px;height:320px;background:var(--teal);opacity:0.18;top:30%;left:40%;}
+ 
+.icon-collage{position:absolute;inset:0;}
+.collage-tile{position:absolute;display:flex;align-items:center;justify-content:center;border-radius:24px;font-size:1.7rem;z-index:1;}
+.collage-tile.t1{width:160px;height:160px;top:6%;left:10%;background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff;}
+.collage-tile.t2{width:120px;height:120px;top:50%;left:2%;color:var(--teal);}
+.collage-tile.t3{width:130px;height:130px;top:12%;right:4%;color:var(--blue);}
+.collage-tile.t4{width:108px;height:108px;bottom:6%;right:16%;color:var(--mint);}
+ 
+.hero-chip{position:absolute;z-index:2;display:flex;align-items:center;gap:8px;padding:10px 16px;font-size:0.78rem;font-weight:700;border-radius:var(--radius-pill);}
+.hero-chip.status{top:0;right:0;}
+.hero-chip.loc{bottom:20%;left:-4%;}
+.hero-chip i{color:var(--teal);}
+ 
+.wa-peek{position:absolute;bottom:0;right:8%;width:208px;padding:16px;z-index:2;animation:floaty 5s ease-in-out infinite;}
+.wa-peek-top{display:flex;align-items:center;gap:6px;margin-bottom:10px;}
+.wa-peek-top span{font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.05em;color:var(--slate);text-transform:uppercase;}
+.wa-peek p{font-size:0.78rem;color:var(--ink);line-height:1.4;margin:0;}
+.wa-peek .wa-peek-bubble{background:#fff;border-radius:14px;padding:10px 12px;box-shadow:0 4px 14px rgba(17,24,43,0.08);}
+ 
+@keyframes floaty{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+@keyframes pulse-ring{0%{transform:scale(0.9);opacity:0.9;}100%{transform:scale(1.6);opacity:0;}}
+ 
+@media(max-width:980px){
+  .hero-grid{grid-template-columns:1fr;}
+  .hero-visual{height:340px;margin-top:20px;}
+  .wa-peek{right:2%;}
+  .hero-chip.loc{left:0;}
+}
+@media(max-width:480px){
+  .collage-tile.t1{width:130px;height:130px;}
+  .wa-peek{width:180px;}
+}
+ 
+/* =====================================================================
+   9. LIVE WHATSAPP INTERACTION SECTION
+   ===================================================================== */
+.live-wa{margin-top:-40px;position:relative;z-index:2;}
+.live-wa-inner{max-width:640px;margin:0 auto;}
+.phone-card-lg{padding:26px 24px;border-radius:32px;min-height:300px;}
+.phone-topbar{display:flex;align-items:center;gap:10px;margin-bottom:20px;}
+.phone-dot{width:9px;height:9px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 3px rgba(52,211,153,0.25);}
+.phone-topbar span{font-family:'Space Mono',monospace;font-size:0.74rem;letter-spacing:0.06em;color:var(--slate);text-transform:uppercase;}
+ 
+.chat-bubble{max-width:84%;padding:13px 17px;border-radius:18px;font-size:0.92rem;margin-bottom:12px;line-height:1.45;opacity:0;transform:translateY(10px);transition:opacity .5s var(--ease), transform .5s var(--ease);}
+.chat-bubble.is-visible{opacity:1;transform:translateY(0);}
+.chat-bubble.out{margin-left:auto;background:linear-gradient(95deg,var(--blue),var(--teal));color:#fff;border-bottom-right-radius:6px;}
+.chat-bubble.in{background:var(--white);color:var(--ink);border-bottom-left-radius:6px;box-shadow:0 4px 14px rgba(17,24,43,0.08);}
+.chat-meta{font-size:0.7rem;color:var(--slate-light);margin-top:-4px;margin-bottom:14px;opacity:0;transition:opacity .5s var(--ease);}
+.chat-meta.is-visible{opacity:1;}
+.chat-meta.right{text-align:right;}
+ 
+.typing-dots{display:inline-flex;gap:4px;padding:13px 16px;border-radius:18px;background:var(--white);box-shadow:0 4px 14px rgba(17,24,43,.08);width:fit-content;margin-bottom:12px;opacity:0;height:0;overflow:hidden;transition:opacity .3s var(--ease);}
+.typing-dots.is-visible{opacity:1;height:auto;padding:13px 16px;}
+.typing-dots span{width:7px;height:7px;border-radius:50%;background:var(--slate-light);animation:typing-bounce 1.2s infinite ease-in-out;}
+.typing-dots span:nth-child(2){animation-delay:.15s;}
+.typing-dots span:nth-child(3){animation-delay:.3s;}
+@keyframes typing-bounce{0%,60%,100%{transform:translateY(0);opacity:.5;}30%{transform:translateY(-5px);opacity:1;}}
+ 
+/* =====================================================================
+   10. FEATURE STRIP / QUICK ACTION CARDS
+   ===================================================================== */
+.feature-card{padding:26px 22px;text-align:left;}
+.feature-card .icon-tile{margin-bottom:14px;}
+.feature-card h3{font-size:1.02rem;margin-bottom:6px;}
+.feature-card p{font-size:0.88rem;margin-bottom:10px;}
+.feature-card .fc-link{font-size:0.82rem;font-weight:600;color:var(--blue);display:inline-flex;align-items:center;gap:6px;}
+.feature-card .fc-link i{transition:transform .3s var(--ease);font-size:0.74rem;}
+.feature-card:hover .fc-link i{transform:translateX(4px);}
+ 
+/* =====================================================================
+   11. ABOUT
+   ===================================================================== */
+.about-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:56px;align-items:center;}
+.about-panel{
+  position:relative;height:340px;border-radius:var(--radius-lg);
+  background:linear-gradient(150deg,rgba(37,87,214,0.14),rgba(14,163,155,0.14));
+  display:flex;align-items:center;justify-content:center;
+  border:1px solid var(--glass-border);overflow:hidden;
+}
+.about-panel i{font-size:5rem;color:var(--blue);opacity:0.85;}
+.about-panel::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 70% 20%,rgba(255,255,255,0.5),transparent 60%);}
+ 
+.about-chip{position:absolute;z-index:2;display:flex;align-items:center;gap:8px;padding:10px 16px;font-size:0.78rem;font-weight:700;border-radius:var(--radius-pill);}
+.about-chip.c1{top:8%;right:-8px;}
+.about-chip.c2{bottom:14%;left:-12px;}
+.about-chip.c3{bottom:-10px;right:18%;}
+.about-chip i{color:var(--teal);}
+ 
+.about-copy p{font-size:1.04rem;margin-bottom:28px;}
+ 
+@media(max-width:980px){.about-grid{grid-template-columns:1fr;}.about-panel{height:280px;margin-bottom:36px;}}
+ 
+/* =====================================================================
+   12. SERVICES
+   ===================================================================== */
+.service-card{padding:30px 26px;}
+.service-card h3{font-size:1.08rem;margin-bottom:8px;}
+.service-card p{font-size:0.9rem;}
+ 
+/* =====================================================================
+   13. CATEGORIES (blister-pack inspired grid)
+   ===================================================================== */
+.category-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-radius:var(--radius-lg);overflow:hidden;
+  background:var(--glass-bg);border:1px solid var(--glass-border);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:var(--glass-shadow);
+}
+.category-cell{padding:30px 18px;text-align:center;border-right:1px dashed rgba(91,101,119,0.25);border-bottom:1px dashed rgba(91,101,119,0.25);transition:background .35s var(--ease), transform .35s var(--ease);}
+.category-grid .category-cell:nth-child(4n){border-right:none;}
+.category-cell i{font-size:1.5rem;color:var(--blue);margin-bottom:12px;display:block;}
+.category-cell span{font-size:0.86rem;font-weight:600;color:var(--ink);}
+.category-cell:hover{background:rgba(37,87,214,0.06);transform:translateY(-2px);}
+.category-cell:hover i{color:var(--teal);}
+ 
+@media(max-width:860px){
+  .category-grid{grid-template-columns:repeat(3,1fr);}
+  .category-grid .category-cell:nth-child(4n){border-right:1px dashed rgba(91,101,119,0.25);}
+  .category-grid .category-cell:nth-child(3n){border-right:none;}
+}
+@media(max-width:560px){
+  .category-grid{grid-template-columns:repeat(2,1fr);}
+  .category-grid .category-cell:nth-child(3n){border-right:1px dashed rgba(91,101,119,0.25);}
+  .category-grid .category-cell:nth-child(2n){border-right:none;}
+}
+ 
+/* =====================================================================
+   14. WHATSAPP PRESCRIPTION FLOW
+   ===================================================================== */
+.wa-section{position:relative;overflow:hidden;}
+.wa-section .glow-1{width:460px;height:460px;background:var(--mint);opacity:0.18;top:-120px;right:-120px;}
+.wa-section .glow-2{width:380px;height:380px;background:var(--blue);opacity:0.14;bottom:-140px;left:-100px;}
+.wa-panel{padding:60px 52px;position:relative;z-index:1;}
+.wa-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:center;}
+.wa-copy h2{font-size:clamp(1.7rem,3vw,2.3rem);margin-bottom:14px;}
+.wa-copy p{font-size:1.04rem;margin-bottom:30px;max-width:480px;}
+.wa-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:20px;}
+.privacy-note{display:flex;align-items:center;gap:8px;font-size:0.82rem;color:var(--slate-light);}
+.privacy-note i{color:var(--teal);}
+ 
+.flow-steps{display:flex;flex-direction:column;gap:0;}
+.flow-step{display:flex;align-items:center;gap:16px;padding:16px 0;position:relative;}
+.flow-step:not(:last-child)::after{content:'';position:absolute;left:25px;top:60px;width:1px;height:30px;border-left:2px dashed rgba(91,101,119,0.3);}
+.flow-step .icon-tile{margin-bottom:0;flex-shrink:0;}
+.flow-step h4{font-size:0.95rem;margin-bottom:3px;}
+.flow-step p{font-size:0.82rem;margin:0;}
+ 
+@media(max-width:980px){.wa-grid{grid-template-columns:1fr;}.wa-panel{padding:40px 28px;}}
+ 
+/* =====================================================================
+   15. WHY CHOOSE US
+   ===================================================================== */
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.why-card{padding:26px 22px;}
+.why-card i{font-size:1.3rem;color:var(--blue);margin-bottom:14px;display:block;}
+.why-card h3{font-size:0.98rem;margin-bottom:6px;}
+.why-card p{font-size:0.85rem;}
+@media(max-width:980px){.why-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.why-grid{grid-template-columns:1fr;}}
+ 
+/* =====================================================================
+   16. DELIVERY SUPPORT
+   ===================================================================== */
+.delivery-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:center;}
+.delivery-copy p{font-size:1.04rem;margin:18px 0 28px;max-width:480px;}
+.delivery-visual{position:relative;height:280px;}
+.delivery-visual .glow{width:260px;height:260px;background:var(--teal);opacity:0.14;top:10%;left:20%;}
+.d-tile{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;border-radius:22px;z-index:1;}
+.d-tile i{font-size:1.6rem;}
+.d-tile span{font-size:0.72rem;font-weight:700;color:var(--slate);}
+.d-tile.d1{width:150px;height:150px;top:0;left:8%;color:var(--blue);}
+.d-tile.d2{width:120px;height:120px;top:30%;right:4%;color:var(--teal);}
+.d-tile.d3{width:128px;height:128px;bottom:0;left:30%;color:var(--mint);}
+@media(max-width:980px){.delivery-grid{grid-template-columns:1fr;}.delivery-visual{height:240px;margin-top:10px;}}
+ 
+/* =====================================================================
+   17. ACCESSIBILITY / PAYMENT / PARKING (shared quiet sections)
+   ===================================================================== */
+.payment-row{display:flex;flex-wrap:wrap;gap:16px;}
+.payment-chip{display:flex;align-items:center;gap:14px;padding:18px 22px;min-width:180px;flex:1;}
+.payment-chip .icon-tile{margin-bottom:0;flex-shrink:0;}
+.payment-chip h3{font-size:0.92rem;margin:0;}
+ 
+/* =====================================================================
+   18. INCLUSIVITY (intentionally quiet)
+   ===================================================================== */
+.inclusive-strip{display:flex;flex-wrap:wrap;justify-content:center;gap:28px;padding:8px 0;}
+.inclusive-item{display:flex;align-items:center;gap:10px;font-size:0.92rem;color:var(--slate);font-weight:500;}
+.inclusive-item i{color:var(--teal);font-size:0.95rem;}
+ 
+/* =====================================================================
+   19. STORE INFORMATION / LOCATION
+   ===================================================================== */
+.location-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:32px;align-items:start;}
+.location-card{padding:36px;}
+.loc-row{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid rgba(17,24,43,0.08);}
+.loc-row:last-of-type{border-bottom:none;}
+.loc-row i{color:var(--blue);font-size:1.05rem;width:22px;margin-top:2px;}
+.loc-row strong{display:block;font-size:0.78rem;color:var(--slate-light);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:3px;}
+.loc-row span{font-size:0.96rem;color:var(--ink);font-weight:500;}
+.loc-note{display:flex;gap:10px;font-size:0.82rem;color:var(--slate-light);margin-top:16px;padding-top:16px;border-top:1px dashed rgba(91,101,119,0.25);}
+.loc-note i{color:var(--teal);margin-top:2px;}
+.location-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px;}
+ 
+.map-wrap{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--glass-shadow);min-height:340px;position:relative;}
+.map-wrap iframe{width:100%;height:100%;min-height:340px;border:0;display:block;}
+.map-note{position:absolute;bottom:14px;left:14px;right:14px;padding:10px 16px;font-size:0.78rem;font-weight:600;border-radius:var(--radius-md);display:flex;align-items:center;gap:8px;}
+.map-note i{color:var(--blue);}
+ 
+@media(max-width:980px){.location-grid{grid-template-columns:1fr;}}
+@media(max-width:560px){.location-actions{grid-template-columns:1fr;}}
+ 
+/* =====================================================================
+   20. CONTACT
+   ===================================================================== */
+.contact-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:32px;}
+.contact-form-card{padding:40px;}
+.form-row{margin-bottom:18px;}
+.form-row label{display:block;font-size:0.85rem;font-weight:600;margin-bottom:8px;color:var(--ink);}
+.form-row input,.form-row textarea{
+  width:100%;padding:14px 16px;border-radius:var(--radius-sm);border:1px solid rgba(17,24,43,0.12);
+  background:rgba(255,255,255,0.7);color:var(--ink);
+  transition:border-color .3s var(--ease), box-shadow .3s var(--ease);
+}
+.form-row input:focus,.form-row textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(37,87,214,0.12);}
+.form-row textarea{resize:vertical;min-height:110px;}
+.form-note{font-size:0.8rem;color:var(--slate-light);margin-top:14px;text-align:center;}
+.form-success{display:none;text-align:center;padding:14px;border-radius:var(--radius-sm);background:rgba(52,211,153,0.12);color:#0a7a58;font-weight:600;font-size:0.9rem;margin-top:16px;}
+.form-success.show{display:block;}
+ 
+.quick-contact{display:flex;flex-direction:column;gap:16px;}
+.quick-card{padding:24px;display:flex;align-items:center;gap:16px;}
+.quick-card .icon-tile{margin-bottom:0;flex-shrink:0;}
+.quick-card h3{font-size:0.96rem;margin-bottom:3px;}
+.quick-card p{font-size:0.82rem;margin:0;}
+ 
+@media(max-width:980px){.contact-grid{grid-template-columns:1fr;}.contact-form-card{padding:28px;}}
+ 
+/* =====================================================================
+   21. DISCLAIMER
+   ===================================================================== */
+.disclaimer-card{max-width:760px;margin:0 auto;padding:40px 44px;text-align:center;border-radius:var(--radius-lg);}
+.disclaimer-card i{font-size:1.6rem;color:var(--teal);margin-bottom:16px;display:block;}
+.disclaimer-card p{font-size:0.94rem;margin-bottom:10px;}
+.disclaimer-card p.muted{font-size:0.86rem;color:var(--slate-light);}
+.disclaimer-card p.emergency{font-weight:700;color:var(--blue-dark);margin-top:16px;padding-top:16px;border-top:1px dashed rgba(91,101,119,0.25);}
+ 
+/* =====================================================================
+   22. FOOTER
+   ===================================================================== */
+.footer{background:var(--ink);color:rgba(255,255,255,0.7);padding:72px 0 28px;position:relative;overflow:hidden;}
+.footer .glow{width:400px;height:400px;background:var(--blue);opacity:0.22;top:-200px;left:50%;transform:translateX(-50%);}
+.footer-grid{display:grid;grid-template-columns:1.4fr 0.8fr 1fr;gap:40px;position:relative;z-index:1;margin-bottom:48px;}
+.footer-brand .brand{color:#fff;margin-bottom:14px;}
+.footer-brand p{color:rgba(255,255,255,0.55);max-width:280px;font-size:0.92rem;}
+.footer h4{color:#fff;font-family:'Sora',sans-serif;font-size:0.92rem;margin-bottom:18px;letter-spacing:0.02em;}
+.footer-links a{display:block;color:rgba(255,255,255,0.6);font-size:0.92rem;padding:6px 0;transition:color .3s var(--ease);}
+.footer-links a:hover{color:#fff;}
+.footer-contact li{display:flex;gap:10px;font-size:0.9rem;color:rgba(255,255,255,0.6);padding:6px 0;align-items:flex-start;}
+.footer-contact a{transition:color .3s var(--ease);}
+.footer-contact a:hover{color:#fff;}
+.footer-contact i{color:var(--teal);margin-top:3px;width:16px;}
+.footer-disclaimer{position:relative;z-index:1;border-top:1px solid rgba(255,255,255,0.1);padding-top:26px;font-size:0.82rem;color:rgba(255,255,255,0.45);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;}
+.back-top{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;transition:background .3s var(--ease), transform .3s var(--ease);}
+.back-top:hover{background:rgba(255,255,255,0.16);transform:translateY(-3px);}
+ 
+@media(max-width:860px){
+  .footer-grid{grid-template-columns:1fr;gap:32px;}
+  .footer-disclaimer{flex-direction:column;text-align:center;}
+}
+ 
+/* =====================================================================
+   23. FLOATING ACTION BUTTONS
+   ===================================================================== */
+.fab-wa{
+  position:fixed;bottom:26px;right:26px;z-index:900;width:60px;height:60px;border-radius:50%;
+  background:linear-gradient(135deg,#1fb858,#0a9c4a);color:#fff;font-size:1.6rem;
+  display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px rgba(15,140,70,0.4);
+  transition:transform .3s var(--ease);
+}
+.fab-wa::before{content:'';position:absolute;inset:-6px;border-radius:50%;border:2px solid rgba(31,184,88,0.4);animation:pulse-ring 2.4s ease-out infinite;}
+.fab-wa:hover{transform:scale(1.08);}
+ 
+.fab-call{
+  display:none;position:fixed;bottom:26px;left:26px;z-index:900;width:54px;height:54px;border-radius:50%;
+  background:var(--blue);color:#fff;font-size:1.3rem;align-items:center;justify-content:center;
+  box-shadow:0 12px 28px rgba(37,87,214,0.4);
+}
+@media(max-width:768px){.fab-call{display:flex;}}
+ 
+/* =====================================================================
+   24. SCROLL REVEAL
+   ===================================================================== */
+[data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease), transform .7s var(--ease);}
+[data-reveal].is-visible{opacity:1;transform:translateY(0);}
+[data-reveal-delay="1"]{transition-delay:.08s;}
+[data-reveal-delay="2"]{transition-delay:.16s;}
+[data-reveal-delay="3"]{transition-delay:.24s;}
+[data-reveal-delay="4"]{transition-delay:.32s;}
+ 
+/* =====================================================================
+   25. ACCESSIBILITY (focus states, reduced motion)
+   ===================================================================== */
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:6px;}
+.skip-link{position:absolute;left:-999px;top:auto;background:var(--blue);color:#fff;padding:10px 18px;border-radius:8px;z-index:2000;}
+.skip-link:focus{left:16px;top:16px;}
+ 
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important;}
+  [data-reveal],.chat-bubble,.chat-meta,.typing-dots{opacity:1 !important;transform:none !important;height:auto !important;}
+}
 </style>
 </head>
-
+ 
 <body>
-
-<nav>
-<div class="logo">Zaid Medical</div>
-</nav>
-
-<section class="hero">
-<h1>Zaid Medical Store</h1>
-<p>Trusted Medicines • Fast Delivery • Best Prices</p>
-<a class="btn" href="https://wa.me/917805833161">Contact on WhatsApp</a>
-</section>
-
-<section class="section">
-<h2>Our Services</h2>
-<div class="cards">
-<div class="card">All Medicines Available</div>
-<div class="card">Home Delivery</div>
-<div class="card">Healthcare Products</div>
+<a href="#main" class="skip-link">Skip to content</a>
+ 
+<!-- =====================================================================
+     NAVBAR
+     ===================================================================== -->
+<header class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="#home" class="brand"><span class="brand-mark" aria-hidden="true"></span>Zaid Medical Stores</a>
+ 
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#categories">Categories</a>
+      <a href="#delivery">Delivery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+ 
+    <div class="nav-cta">
+      <a href="#" class="btn btn-primary btn-sm js-wa" data-wa-msg="Hi, I'd like to order medicines."><i class="fa-brands fa-whatsapp"></i> Order on WhatsApp</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+ 
+<div class="mobile-panel" id="mobilePanel">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#categories">Categories</a>
+  <a href="#delivery">Delivery</a>
+  <a href="#contact">Contact</a>
+  <a href="#" class="btn btn-primary btn-block js-wa" data-wa-msg="Hi, I'd like to order medicines."><i class="fa-brands fa-whatsapp"></i> Order on WhatsApp</a>
 </div>
+ 
+<main id="main">
+ 
+<!-- =====================================================================
+     HERO
+     ===================================================================== -->
+<section class="hero" id="home">
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+  <div class="container hero-grid">
+ 
+    <div class="hero-copy" data-reveal>
+      <span class="eyebrow"><i class="fa-solid fa-staff-snake"></i> RX &middot; Local Pharmacy &middot; Khandwa</span>
+      <h1>Your Trusted <span>Medical Store</span> in Khandwa</h1>
+      <p>Genuine medicines, healthcare essentials, prescription support, and quick service — all with care, honesty, and reliability.</p>
+ 
+      <div class="hero-actions">
+        <a href="#" class="btn btn-primary js-wa" data-wa-msg="Hi, I'd like to order medicines."><i class="fa-brands fa-whatsapp"></i> Order on WhatsApp</a>
+        <a href="#" class="btn btn-ghost js-call"><i class="fa-solid fa-phone"></i> Call Now</a>
+        <a href="#" class="btn btn-ghost js-directions"><i class="fa-solid fa-location-dot"></i> Get Directions</a>
+      </div>
+ 
+      <div class="trust-row">
+        <span class="badge-pill"><i class="fa-solid fa-circle-check"></i> Genuine Medicines</span>
+        <span class="badge-pill"><i class="fa-solid fa-bolt"></i> Quick Support</span>
+        <span class="badge-pill"><i class="fa-solid fa-shop"></i> Local Trusted Store</span>
+        <span class="badge-pill"><i class="fa-solid fa-file-prescription"></i> Prescription Friendly</span>
+      </div>
+    </div>
+ 
+    <div class="hero-visual" data-reveal data-reveal-delay="2">
+      <div class="glow glow-3"></div>
+ 
+      <div class="icon-collage">
+        <div class="collage-tile t1"><i class="fa-solid fa-mortar-pestle"></i></div>
+        <div class="collage-tile t2 glass-strong"><i class="fa-solid fa-stethoscope"></i></div>
+        <div class="collage-tile t3 glass-strong"><i class="fa-solid fa-capsules"></i></div>
+        <div class="collage-tile t4 glass-strong"><i class="fa-solid fa-heart-pulse"></i></div>
+      </div>
+ 
+      <span class="hero-chip status glass-strong"><span class="status-dot" data-config="statusDot"></span> <span data-config="status">Open &middot; Closes 11:00 PM</span></span>
+      <span class="hero-chip loc badge-pill"><i class="fa-solid fa-location-dot"></i> Khandwa, MP</span>
+ 
+      <a href="#live-whatsapp" class="wa-peek glass-strong">
+        <div class="wa-peek-top"><span class="phone-dot"></span><span>WhatsApp</span></div>
+        <div class="wa-peek-bubble"><p><i class="fa-solid fa-circle-check" style="color:var(--mint)"></i> All medicines available…</p></div>
+      </a>
+    </div>
+ 
+  </div>
 </section>
-
-<section class="section">
-<div class="contact">
-<h2>Contact Us</h2>
-<p>📞 7805833161</p>
-<br>
-<a class="btn" href="https://wa.me/917805833161">Chat on WhatsApp</a>
-</div>
+ 
+<!-- =====================================================================
+     LIVE WHATSAPP-STYLE INTERACTION SECTION
+     ===================================================================== -->
+<section class="live-wa" id="live-whatsapp">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <span class="eyebrow"><i class="fa-brands fa-whatsapp"></i> Live Example</span>
+      <h2>WhatsApp Support, In Real Time</h2>
+      <p>Here's what a typical conversation with our store looks like.</p>
+    </div>
+ 
+    <div class="live-wa-inner" data-reveal>
+      <div class="phone-card-lg glass-strong" id="liveWaCard">
+        <div class="phone-topbar">
+          <span class="phone-dot"></span>
+          <span>WhatsApp &middot; Zaid Medical Stores</span>
+        </div>
+ 
+        <div class="chat-bubble out" data-msg="1"><i class="fa-solid fa-paperclip"></i>&nbsp; Prescription_Photo.jpg</div>
+        <div class="chat-meta right" data-meta="1">You &middot; 10:42 AM</div>
+ 
+        <div class="typing-dots" data-typing="2"><span></span><span></span><span></span></div>
+        <div class="chat-bubble in" data-msg="2">Got it! Checking availability for all items now…</div>
+        <div class="chat-meta" data-meta="2">Zaid Medical Stores &middot; 10:43 AM</div>
+ 
+        <div class="typing-dots" data-typing="3"><span></span><span></span><span></span></div>
+        <div class="chat-bubble in" data-msg="3"><i class="fa-solid fa-circle-check" style="color:var(--mint)"></i>&nbsp; All medicines available. Ready for pickup in 10 mins, or we can help with delivery support.</div>
+        <div class="chat-meta" data-meta="3">Zaid Medical Stores &middot; 10:44 AM</div>
+      </div>
+    </div>
+  </div>
 </section>
-
-<footer>
-<p>© 2026 Zaid Medical Store • All Rights Reserved</p>
+ 
+<!-- =====================================================================
+     QUICK ACTION CARDS
+     ===================================================================== -->
+<section class="section-pad">
+  <div class="container grid grid-4">
+    <a href="#contact" class="glass card-hover feature-card" data-reveal data-reveal-delay="1">
+      <div class="icon-tile"><i class="fa-solid fa-paper-plane"></i></div>
+      <h3>Send Prescription</h3>
+      <p>Share a photo of your prescription on WhatsApp for quick processing.</p>
+      <span class="fc-link">Get started <i class="fa-solid fa-arrow-right"></i></span>
+    </a>
+    <a href="#whatsapp" class="glass card-hover feature-card" data-reveal data-reveal-delay="2">
+      <div class="icon-tile"><i class="fa-solid fa-magnifying-glass"></i></div>
+      <h3>Check Medicine Availability</h3>
+      <p>Ask us before you visit — we'll confirm stock in minutes.</p>
+      <span class="fc-link">Ask now <i class="fa-solid fa-arrow-right"></i></span>
+    </a>
+    <a href="#delivery" class="glass card-hover feature-card" data-reveal data-reveal-delay="3">
+      <div class="icon-tile"><i class="fa-solid fa-truck"></i></div>
+      <h3>Home Delivery Support</h3>
+      <p>Need medicines at home? Reach out for delivery support in your area.</p>
+      <span class="fc-link">Learn more <i class="fa-solid fa-arrow-right"></i></span>
+    </a>
+    <a href="#categories" class="glass card-hover feature-card" data-reveal data-reveal-delay="4">
+      <div class="icon-tile"><i class="fa-solid fa-heart"></i></div>
+      <h3>Health Essentials</h3>
+      <p>From daily wellness to baby care — everything your family needs.</p>
+      <span class="fc-link">Browse <i class="fa-solid fa-arrow-right"></i></span>
+    </a>
+  </div>
+</section>
+ 
+<!-- =====================================================================
+     ABOUT
+     ===================================================================== -->
+<section class="section-pad" id="about">
+  <div class="container about-grid">
+ 
+    <div class="about-panel" data-reveal>
+      <i class="fa-solid fa-shop"></i>
+      <span class="about-chip badge-pill c1"><i class="fa-solid fa-shield-halved"></i> Genuine &amp; Verified</span>
+      <span class="about-chip badge-pill c2"><i class="fa-brands fa-whatsapp"></i> WhatsApp-First Support</span>
+      <span class="about-chip badge-pill c3"><i class="fa-solid fa-location-dot"></i> Based in Khandwa, MP</span>
+    </div>
+ 
+    <div class="about-copy" data-reveal data-reveal-delay="2">
+      <span class="eyebrow">About The Store</span>
+      <h2>Care, Trust &amp; Genuine Medicines</h2>
+      <p>Zaid Medical Stores is a trusted local medical store in Khandwa, committed to providing genuine medicines, healthcare essentials, and helpful customer support. We focus on honesty, reliability, and quick assistance so customers can get the right products with confidence.</p>
+    </div>
+ 
+  </div>
+</section>
+ 
+<!-- =====================================================================
+     SERVICES
+     ===================================================================== -->
+<section class="section-pad" id="services">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <span class="eyebrow">What We Offer</span>
+      <h2>Services Built Around Your Health</h2>
+      <p>Everything you need from a modern, trustworthy medical store.</p>
+    </div>
+ 
+    <div class="grid grid-4">
+      <div class="glass card-hover service-card" data-reveal data-reveal-delay="1">
+        <div class="icon-tile"><i class="fa-solid fa-file-prescription"></i></div>
+        <h3>Prescription Medicines</h3>
+        <p>Accurate fulfilment of doctor-prescribed medicines, handled with care.</p>
+      </div>
+      <div class="glass card-hover service-card" data-reveal data-reveal-delay="2">
+        <div class="icon-tile"><i class="fa-solid fa-pills"></i></div>
+        <h3>OTC Medicines</h3>
+        <p>Common over-the-counter medicines for everyday health needs.</p>
+      </div>
+      <div class="glass card-hover service-card" data-reveal data-reveal-delay="3">
+        <div class="icon-tile"><i class="fa-solid fa-heart"></i></div>
+        <h3>Health &amp; Wellness Products</h3>
+        <p>Supplements and wellness essentials to support a healthier routine.</p>
+      </div>
+      <div class="glass card-hover service-card" data-reveal data-reveal-delay="4">
+        <div class="icon-tile"><i class="fa-solid fa-baby"></i></div>
+        <h3>Baby Care Products</h3>
+        <p>Gentle, trusted baby care essentials for your little one.</p>
+      </div>
+      <div class="glass card-hover service-card" data-reveal data-reveal-delay="1">
+        <div class="icon-tile"><i class="fa-solid fa-pump-soap"></i></div>
+        <h3>Personal Care Essentials</h3>
+        <p>Everyday personal care and hygiene products you can rely on.</p>
+      </div>
+      <div class="glass card-hover service-card" data-reveal data-reveal-delay="2">
+        <div class="icon-tile"><i class="fa-solid fa-prescription-bottle-medical"></i></div>
+        <h3>Basic Medical Supplies</h3>
+        <p>Bandages, supports, and other essential medical supplies in stock.</p>
+      </div>
+      <div class="glass card-hover service-card" data-reveal data-reveal-delay="3">
+        <div class="icon-tile"><i class="fa-solid fa-truck"></i></div>
+        <h3>Home Delivery Support</h3>
+        <p>Get support for delivery of medicines within the local area.</p>
+      </div>
+      <div class="glass card-hover service-card" data-reveal data-reveal-delay="4">
+        <div class="icon-tile"><i class="fa-solid fa-circle-check"></i></div>
+        <h3>WhatsApp Availability Check</h3>
+        <p>Message us your medicine list and we'll confirm what's in stock.</p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- =====================================================================
+     CATEGORIES
+     ===================================================================== -->
+<section class="section-pad" id="categories">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <span class="eyebrow">Browse By Category</span>
+      <h2>Premium Product Categories</h2>
+      <p>A wide, organised range of healthcare products — just ask, and we'll check it for you.</p>
+    </div>
+ 
+    <div class="category-grid" data-reveal>
+      <div class="category-cell"><i class="fa-solid fa-tablets"></i><span>Tablets &amp; Capsules</span></div>
+      <div class="category-cell"><i class="fa-solid fa-flask"></i><span>Syrups</span></div>
+      <div class="category-cell"><i class="fa-solid fa-syringe"></i><span>Injections</span></div>
+      <div class="category-cell"><i class="fa-solid fa-baby"></i><span>Baby Care</span></div>
+      <div class="category-cell"><i class="fa-solid fa-spa"></i><span>Skin Care</span></div>
+      <div class="category-cell"><i class="fa-solid fa-bandage"></i><span>Pain Relief</span></div>
+      <div class="category-cell"><i class="fa-solid fa-droplet"></i><span>Diabetes Care</span></div>
+      <div class="category-cell"><i class="fa-solid fa-heart-pulse"></i><span>BP &amp; Heart Care</span></div>
+      <div class="category-cell"><i class="fa-solid fa-leaf"></i><span>Vitamins &amp; Supplements</span></div>
+      <div class="category-cell"><i class="fa-solid fa-stethoscope"></i><span>Medical Devices</span></div>
+      <div class="category-cell"><i class="fa-solid fa-briefcase-medical"></i><span>First Aid</span></div>
+      <div class="category-cell"><i class="fa-solid fa-calendar-check"></i><span>Daily Essentials</span></div>
+    </div>
+  </div>
+</section>
+ 
+<!-- =====================================================================
+     WHATSAPP PRESCRIPTION FLOW
+     ===================================================================== -->
+<section class="section-pad wa-section" id="whatsapp">
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+  <div class="container">
+    <div class="glass-strong wa-panel" data-reveal>
+      <div class="wa-grid">
+        <div class="wa-copy">
+          <span class="eyebrow"><i class="fa-brands fa-whatsapp"></i> Fast &amp; Simple</span>
+          <h2>Send Your Prescription on WhatsApp</h2>
+          <p>Need medicines quickly? Share your prescription or medicine list with us on WhatsApp. We will help you check availability and guide you with store support.</p>
+          <div class="wa-actions">
+            <a href="#" class="btn btn-primary js-wa" data-wa-msg="Hi, I'd like to send my prescription for a medicine availability check."><i class="fa-solid fa-paper-plane"></i> Send Prescription</a>
+            <a href="#" class="btn btn-ghost js-wa" data-wa-msg="Hi, I have a question about medicine availability."><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+          </div>
+          <p class="privacy-note"><i class="fa-solid fa-lock"></i> Your prescription details are handled carefully and respectfully.</p>
+        </div>
+ 
+        <div class="flow-steps">
+          <div class="flow-step">
+            <div class="icon-tile"><i class="fa-solid fa-camera"></i></div>
+            <div><h4>Snap a photo</h4><p>Take a clear photo of your prescription or medicine list.</p></div>
+          </div>
+          <div class="flow-step">
+            <div class="icon-tile"><i class="fa-brands fa-whatsapp"></i></div>
+            <div><h4>Send on WhatsApp</h4><p>Share it with us directly — no app or signup needed.</p></div>
+          </div>
+          <div class="flow-step">
+            <div class="icon-tile"><i class="fa-solid fa-circle-check"></i></div>
+            <div><h4>Get confirmation</h4><p>We confirm availability and guide you on next steps.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- =====================================================================
+     WHY CHOOSE US
+     ===================================================================== -->
+<section class="section-pad">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <span class="eyebrow">Why Choose Us</span>
+      <h2>Why Customers Trust Zaid Medical Stores</h2>
+      <p>The little things that make a local pharmacy feel dependable.</p>
+    </div>
+ 
+    <div class="why-grid">
+      <div class="glass card-hover why-card" data-reveal data-reveal-delay="1"><i class="fa-solid fa-shield-halved"></i><h3>Genuine &amp; Reliable</h3><p>Medicines sourced and stored with care, every time.</p></div>
+      <div class="glass card-hover why-card" data-reveal data-reveal-delay="2"><i class="fa-solid fa-bolt"></i><h3>Quick Response</h3><p>Fast, helpful support whenever you reach out.</p></div>
+      <div class="glass card-hover why-card" data-reveal data-reveal-delay="3"><i class="fa-solid fa-shop"></i><h3>Local &amp; Trusted</h3><p>A familiar medical store, rooted in Khandwa.</p></div>
+      <div class="glass card-hover why-card" data-reveal data-reveal-delay="4"><i class="fa-solid fa-face-smile"></i><h3>Customer-Friendly</h3><p>Service that puts your comfort and time first.</p></div>
+      <div class="glass card-hover why-card" data-reveal data-reveal-delay="1"><i class="fa-solid fa-broom"></i><h3>Clean &amp; Organised</h3><p>A tidy, well-arranged store experience.</p></div>
+      <div class="glass card-hover why-card" data-reveal data-reveal-delay="2"><i class="fa-brands fa-whatsapp"></i><h3>Easy WhatsApp Ordering</h3><p>Order or ask questions without a phone call.</p></div>
+      <div class="glass card-hover why-card" data-reveal data-reveal-delay="3"><i class="fa-solid fa-lock"></i><h3>Privacy Respected</h3><p>Your prescription details are handled carefully.</p></div>
+      <div class="glass card-hover why-card" data-reveal data-reveal-delay="4"><i class="fa-solid fa-compass"></i><h3>Convenient Location</h3><p>Easy to find and reach in Khandwa.</p></div>
+    </div>
+  </div>
+</section>
+ 
+<!-- =====================================================================
+     DELIVERY SUPPORT
+     ===================================================================== -->
+<section class="section-pad" id="delivery">
+  <div class="container delivery-grid">
+    <div class="delivery-copy" data-reveal>
+      <span class="eyebrow">Delivery Support</span>
+      <h2>Medicine Support Made Easier</h2>
+      <p>Contact us to check medicine availability and delivery support in your area. We aim to make essential healthcare products more accessible for local customers.</p>
+      <a href="#" class="btn btn-primary js-wa" data-wa-msg="Hi, I'd like to ask about home delivery support for medicines."><i class="fa-brands fa-whatsapp"></i> Ask for Delivery Support</a>
+    </div>
+ 
+    <div class="delivery-visual" data-reveal data-reveal-delay="2">
+      <div class="glow"></div>
+      <div class="glass-strong d-tile d1"><i class="fa-solid fa-truck"></i><span>Delivery Support</span></div>
+      <div class="glass-strong d-tile d2"><i class="fa-solid fa-location-dot"></i><span>Local Area</span></div>
+      <div class="glass-strong d-tile d3"><i class="fa-solid fa-clock"></i><span>Quick Response</span></div>
+    </div>
+  </div>
+</section>
+ 
+<hr class="divider-dashed">
+ 
+<!-- =====================================================================
+     ACCESSIBILITY & COMFORT
+     ===================================================================== -->
+<section class="section-pad tight">
+  <div class="container">
+    <div class="section-head compact" data-reveal>
+      <span class="eyebrow">Accessibility &amp; Comfort</span>
+      <h2>Accessibility &amp; Comfort</h2>
+      <p>We've designed our store to be comfortable, inclusive, and accessible for every visitor.</p>
+    </div>
+ 
+    <div class="chip-grid" data-reveal>
+      <span class="chip"><i class="fa-solid fa-headphones"></i> Assisted listening devices</span>
+      <span class="chip"><i class="fa-solid fa-tower-broadcast"></i> Assistive hearing loop</span>
+      <span class="chip"><i class="fa-solid fa-wheelchair"></i> Wheelchair-accessible car park</span>
+      <span class="chip"><i class="fa-solid fa-wheelchair"></i> Wheelchair-accessible entrance</span>
+      <span class="chip"><i class="fa-solid fa-wheelchair"></i> Wheelchair-accessible seating</span>
+      <span class="chip"><i class="fa-solid fa-wheelchair"></i> Wheelchair-accessible toilet</span>
+      <span class="chip"><i class="fa-solid fa-restroom"></i> Gender-neutral toilets</span>
+      <span class="chip"><i class="fa-solid fa-toilet"></i> Restroom</span>
+      <span class="chip"><i class="fa-solid fa-baby"></i> Nursing room</span>
+    </div>
+  </div>
+</section>
+ 
+<!-- =====================================================================
+     PAYMENT OPTIONS
+     ===================================================================== -->
+<section class="section-pad tight">
+  <div class="container">
+    <div class="section-head compact" data-reveal>
+      <span class="eyebrow">Payments</span>
+      <h2>Convenient Payment Options</h2>
+      <p>Pay the way that's easiest for you — in-store and contactless.</p>
+    </div>
+ 
+    <div class="payment-row" data-reveal>
+      <div class="glass card-hover payment-chip">
+        <div class="icon-tile"><i class="fa-solid fa-credit-card"></i></div>
+        <h3>Credit cards</h3>
+      </div>
+      <div class="glass card-hover payment-chip">
+        <div class="icon-tile"><i class="fa-solid fa-credit-card"></i></div>
+        <h3>Debit cards</h3>
+      </div>
+      <div class="glass card-hover payment-chip">
+        <div class="icon-tile"><i class="fa-brands fa-google-pay"></i></div>
+        <h3>Google Pay</h3>
+      </div>
+      <div class="glass card-hover payment-chip">
+        <div class="icon-tile" style="transform:rotate(90deg)"><i class="fa-solid fa-wifi"></i></div>
+        <h3>NFC mobile payments</h3>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- =====================================================================
+     PARKING & VISIT CONVENIENCE
+     ===================================================================== -->
+<section class="section-pad tight">
+  <div class="container">
+    <div class="section-head compact" data-reveal>
+      <span class="eyebrow">Getting Here</span>
+      <h2>Easy to Visit</h2>
+      <p>Multiple parking options nearby make it easy to drop in.</p>
+    </div>
+ 
+    <div class="chip-grid" data-reveal>
+      <span class="chip"><i class="fa-solid fa-warehouse"></i> Free parking garage <span class="tag free">Free</span></span>
+      <span class="chip"><i class="fa-solid fa-square-parking"></i> Free parking lot <span class="tag free">Free</span></span>
+      <span class="chip"><i class="fa-solid fa-road"></i> Free street parking <span class="tag free">Free</span></span>
+      <span class="chip"><i class="fa-solid fa-circle-check"></i> On-site parking</span>
+      <span class="chip"><i class="fa-solid fa-warehouse"></i> Paid parking garage <span class="tag paid">Paid</span></span>
+      <span class="chip"><i class="fa-solid fa-square-parking"></i> Paid parking lot <span class="tag paid">Paid</span></span>
+      <span class="chip"><i class="fa-solid fa-road"></i> Paid street parking <span class="tag paid">Paid</span></span>
+    </div>
+  </div>
+</section>
+ 
+<!-- =====================================================================
+     INCLUSIVITY / COMMUNITY (intentionally quiet)
+     ===================================================================== -->
+<section class="section-pad tight">
+  <div class="container">
+    <div class="section-head center compact" data-reveal>
+      <span class="eyebrow quiet">Inclusive &amp; Customer-Friendly</span>
+      <h2>Inclusive &amp; Customer-Friendly</h2>
+      <p>Every customer is welcomed with the same care and respect.</p>
+    </div>
+ 
+    <div class="inclusive-strip" data-reveal>
+      <span class="inclusive-item"><i class="fa-solid fa-heart"></i> LGBTQ+ friendly</span>
+      <span class="inclusive-item"><i class="fa-solid fa-handshake"></i> Welcoming environment</span>
+      <span class="inclusive-item"><i class="fa-solid fa-users"></i> Respectful service for all customers</span>
+    </div>
+  </div>
+</section>
+ 
+<!-- =====================================================================
+     STORE INFORMATION / LOCATION
+     ===================================================================== -->
+<section class="section-pad" id="location">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <span class="eyebrow">Find Us</span>
+      <h2>Visit Zaid Medical Stores in Khandwa</h2>
+      <p>Drop by, call ahead, or message us on WhatsApp — whatever's easiest for you.</p>
+    </div>
+ 
+    <div class="location-grid">
+      <div class="glass location-card" data-reveal>
+        <div class="loc-row">
+          <i class="fa-solid fa-location-dot"></i>
+          <div><strong>Address</strong><span data-config="address">Nagchoon Rd, Gulshan Nagar, Kasal Pura, Khandwa, Madhya Pradesh 450001, India</span></div>
+        </div>
+        <div class="loc-row">
+          <i class="fa-solid fa-phone"></i>
+          <div><strong>Phone</strong><span data-config="phoneDisplay">078058 33161</span></div>
+        </div>
+        <div class="loc-row">
+          <i class="fa-brands fa-whatsapp"></i>
+          <div><strong>WhatsApp</strong><span data-config="whatsappDisplay">078058 33161</span></div>
+        </div>
+        <div class="loc-row">
+          <i class="fa-solid fa-globe"></i>
+          <div><strong>Website</strong><span data-config="websiteDisplay">zaid123719.github.io</span></div>
+        </div>
+        <div class="loc-row">
+          <i class="fa-solid fa-location-crosshairs"></i>
+          <div><strong>Map Reference</strong><span data-config="plusCode">R8VP+4J, Khandwa, Madhya Pradesh</span></div>
+        </div>
+        <div class="loc-row">
+          <i class="fa-solid fa-clock"></i>
+          <div><strong>Opening Hours</strong><span data-config="status">Open &middot; Closes 11:00 PM</span></div>
+        </div>
+ 
+        <div class="loc-note"><i class="fa-solid fa-circle-info"></i> Timings may vary on festival days or special occasions. Please call or WhatsApp before visiting.</div>
+ 
+        <div class="location-actions">
+          <a href="#" class="btn btn-dark js-directions"><i class="fa-solid fa-map"></i> Maps</a>
+          <a href="#" class="btn btn-ghost js-call"><i class="fa-solid fa-phone"></i> Call</a>
+          <a href="#" class="btn btn-ghost js-wa" data-wa-msg="Hi, I have a question for Zaid Medical Stores."><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          <a href="#" class="btn btn-ghost js-website"><i class="fa-solid fa-globe"></i> Website</a>
+        </div>
+      </div>
+ 
+      <div class="map-wrap" data-reveal data-reveal-delay="2">
+        <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=R8VP%2B4J%2C%20Khandwa%2C%20Madhya%20Pradesh&t=&z=16&ie=UTF8&iwloc=&output=embed"
+          title="Map showing Zaid Medical Stores location in Khandwa"></iframe>
+        <div class="map-note glass-strong"><i class="fa-solid fa-circle-info"></i> Map centred on Plus Code R8VP+4J, Khandwa.</div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- =====================================================================
+     CONTACT
+     ===================================================================== -->
+<section class="section-pad" id="contact">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <span class="eyebrow">Get In Touch</span>
+      <h2>Have a Question? Reach Out</h2>
+      <p>Fill the form and it'll open WhatsApp with your details, so we can respond quickly.</p>
+    </div>
+ 
+    <div class="contact-grid">
+      <form class="glass contact-form-card" id="contactForm" data-reveal>
+        <div class="form-row">
+          <label for="cf-name">Full Name</label>
+          <input type="text" id="cf-name" name="name" placeholder="Your full name" required>
+        </div>
+        <div class="form-row">
+          <label for="cf-phone">Phone Number</label>
+          <input type="tel" id="cf-phone" name="phone" placeholder="Your phone number" required>
+        </div>
+        <div class="form-row">
+          <label for="cf-medicine">Medicine Requirement</label>
+          <input type="text" id="cf-medicine" name="medicine" placeholder="What medicine(s) do you need?">
+        </div>
+        <div class="form-row">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" placeholder="Tell us a bit more…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block"><i class="fa-brands fa-whatsapp"></i> Submit Request</button>
+        <p class="form-note">This opens WhatsApp with your details filled in — nothing is sent automatically.</p>
+        <div class="form-success" id="formSuccess"><i class="fa-solid fa-circle-check"></i> Opening WhatsApp with your request…</div>
+      </form>
+ 
+      <div class="quick-contact" data-reveal data-reveal-delay="2">
+        <a href="#" class="glass card-hover quick-card js-call">
+          <div class="icon-tile"><i class="fa-solid fa-phone"></i></div>
+          <div><h3>Call Now</h3><p>Speak with our store directly.</p></div>
+        </a>
+        <a href="#" class="glass card-hover quick-card js-wa" data-wa-msg="Hi, I'd like to get in touch with Zaid Medical Stores.">
+          <div class="icon-tile"><i class="fa-brands fa-whatsapp"></i></div>
+          <div><h3>WhatsApp</h3><p>Message us anytime, we usually reply fast.</p></div>
+        </a>
+        <a href="#" class="glass card-hover quick-card js-directions">
+          <div class="icon-tile"><i class="fa-solid fa-location-dot"></i></div>
+          <div><h3>Get Directions</h3><p>Find us easily on the map.</p></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- =====================================================================
+     DISCLAIMER
+     ===================================================================== -->
+<section class="section-pad tight">
+  <div class="container">
+    <div class="glass disclaimer-card" data-reveal>
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Zaid Medical Stores provides medicine availability and store support. We do not replace professional medical consultation. Please take medicines only as prescribed by a qualified doctor.</p>
+      <p class="muted">Prescription details and customer information are handled carefully and respectfully.</p>
+      <p class="emergency"><i class="fa-solid fa-triangle-exclamation" style="display:inline;font-size:0.9em;margin-right:6px;"></i>For emergency medical conditions, please contact a doctor, hospital, or emergency medical service immediately.</p>
+    </div>
+  </div>
+</section>
+ 
+</main>
+ 
+<!-- =====================================================================
+     FOOTER
+     ===================================================================== -->
+<footer class="footer">
+  <div class="glow"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="brand"><span class="brand-mark"></span>Zaid Medical Stores</a>
+        <p>Trusted Medical Store in Khandwa — genuine medicines and caring, dependable service.</p>
+      </div>
+ 
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#categories">Categories</a>
+        <a href="#contact">Contact</a>
+      </div>
+ 
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-phone"></i><a href="#" class="js-call" data-config="phoneDisplay">078058 33161</a></li>
+          <li><i class="fa-brands fa-whatsapp"></i><a href="#" class="js-wa" data-wa-msg="Hi, I have a question for Zaid Medical Stores." data-config="whatsappDisplay">078058 33161</a></li>
+          <li><i class="fa-solid fa-globe"></i><a href="#" class="js-website" data-config="websiteDisplay">zaid123719.github.io</a></li>
+          <li><i class="fa-solid fa-location-dot"></i><span data-config="address">Nagchoon Rd, Gulshan Nagar, Kasal Pura, Khandwa, Madhya Pradesh 450001, India</span></li>
+        </ul>
+      </div>
+    </div>
+ 
+    <div class="footer-disclaimer">
+      <span>This website is for medicine availability and store information only. Please consult a doctor before taking any medicine. &copy; <span id="year"></span> Zaid Medical Stores. All rights reserved.</span>
+      <a href="#home" class="back-top" id="backTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+  </div>
 </footer>
-
-<a class="whatsapp" href="https://wa.me/917805833161">💬</a>
-
+ 
+<a href="#" class="fab-wa js-wa" data-wa-msg="Hi, I'd like to order medicines." aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<a href="#" class="fab-call js-call" aria-label="Call store"><i class="fa-solid fa-phone"></i></a>
+ 
+<script>
+/* =====================================================================
+   1. STORE CONFIG — EDIT YOUR REAL DETAILS HERE
+   Everything elsewhere on the page (nav, footer, location card, links)
+   updates automatically from this single object.
+   ===================================================================== */
+const STORE_CONFIG = {
+  // tel: link uses full international format
+  phone: "+917805833161",
+  // how the phone number is displayed on the page
+  phoneDisplay: "078058 33161",
+  // wa.me requires digits only, country code, NO + and no spaces
+  whatsapp: "917805833161",
+  whatsappDisplay: "078058 33161",
+  website: "https://zaid123719.github.io",
+  websiteDisplay: "zaid123719.github.io",
+  address: "Nagchoon Rd, Gulshan Nagar, Kasal Pura, Khandwa, Madhya Pradesh 450001, India",
+  plusCode: "R8VP+4J, Khandwa, Madhya Pradesh",
+  // shown as a live-feeling status badge — update this as your hours change
+  status: "Open · Closes 11:00 PM",
+  // query used for the "Get Directions" button and map embed (Plus Code gives the most accurate pin)
+  mapsQuery: "R8VP+4J, Khandwa, Madhya Pradesh"
+};
+ 
+/* =====================================================================
+   2. APPLY CONFIG TO THE DOM
+   ===================================================================== */
+document.querySelectorAll('[data-config]').forEach(el => {
+  const key = el.getAttribute('data-config');
+  if (STORE_CONFIG[key]) el.textContent = STORE_CONFIG[key];
+});
+ 
+document.querySelectorAll('.js-call').forEach(el => {
+  el.setAttribute('href', `tel:${STORE_CONFIG.phone}`);
+});
+ 
+document.querySelectorAll('.js-directions').forEach(el => {
+  el.setAttribute('href', `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(STORE_CONFIG.mapsQuery)}`);
+  el.setAttribute('target', '_blank');
+  el.setAttribute('rel', 'noopener');
+});
+ 
+document.querySelectorAll('.js-website').forEach(el => {
+  el.setAttribute('href', STORE_CONFIG.website);
+  el.setAttribute('target', '_blank');
+  el.setAttribute('rel', 'noopener');
+});
+ 
+document.querySelectorAll('.js-wa').forEach(el => {
+  const msg = el.getAttribute('data-wa-msg') || "Hi, I'd like to know more about Zaid Medical Stores.";
+  el.setAttribute('href', `https://wa.me/${STORE_CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`);
+  el.setAttribute('target', '_blank');
+  el.setAttribute('rel', 'noopener');
+});
+ 
+/* =====================================================================
+   3. MOBILE NAV TOGGLE
+   ===================================================================== */
+const navToggle = document.getElementById('navToggle');
+const mobilePanel = document.getElementById('mobilePanel');
+ 
+function closeMobilePanel(){
+  mobilePanel.classList.remove('is-open');
+  navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+  navToggle.setAttribute('aria-expanded', 'false');
+}
+ 
+navToggle.addEventListener('click', () => {
+  const isOpen = mobilePanel.classList.toggle('is-open');
+  navToggle.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+  navToggle.setAttribute('aria-expanded', String(isOpen));
+});
+ 
+mobilePanel.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobilePanel));
+ 
+/* =====================================================================
+   4. STICKY NAVBAR ON SCROLL
+   ===================================================================== */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('is-scrolled', window.scrollY > 12);
+}, { passive: true });
+ 
+/* =====================================================================
+   5. SMOOTH SCROLL WITH NAVBAR OFFSET
+   ===================================================================== */
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    const id = link.getAttribute('href');
+    if (id.length < 2) return;
+    const target = document.querySelector(id);
+    if (!target) return;
+    e.preventDefault();
+    const offset = target.getBoundingClientRect().top + window.pageYOffset - 100;
+    window.scrollTo({ top: offset, behavior: 'smooth' });
+  });
+});
+ 
+/* =====================================================================
+   6. SCROLL REVEAL (IntersectionObserver)
+   ===================================================================== */
+const revealEls = document.querySelectorAll('[data-reveal]');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ 
+if (prefersReducedMotion) {
+  revealEls.forEach(el => el.classList.add('is-visible'));
+} else if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(el => observer.observe(el));
+} else {
+  revealEls.forEach(el => el.classList.add('is-visible'));
+}
+ 
+/* =====================================================================
+   7. LIVE WHATSAPP DEMO — STAGED MESSAGE REVEAL
+   ===================================================================== */
+const liveWaCard = document.getElementById('liveWaCard');
+ 
+function playLiveWaSequence(){
+  const show = (selector) => {
+    const el = liveWaCard.querySelector(selector);
+    if (el) el.classList.add('is-visible');
+  };
+  const hide = (selector) => {
+    const el = liveWaCard.querySelector(selector);
+    if (el) el.classList.remove('is-visible');
+  };
+ 
+  show('[data-msg="1"]');
+  show('[data-meta="1"]');
+ 
+  setTimeout(() => show('[data-typing="2"]'), 700);
+  setTimeout(() => { hide('[data-typing="2"]'); show('[data-msg="2"]'); show('[data-meta="2"]'); }, 1900);
+ 
+  setTimeout(() => show('[data-typing="3"]'), 2500);
+  setTimeout(() => { hide('[data-typing="3"]'); show('[data-msg="3"]'); show('[data-meta="3"]'); }, 3900);
+}
+ 
+if (prefersReducedMotion) {
+  liveWaCard.querySelectorAll('.chat-bubble,.chat-meta').forEach(el => el.classList.add('is-visible'));
+} else if ('IntersectionObserver' in window) {
+  const waObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        playLiveWaSequence();
+        waObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+  waObserver.observe(liveWaCard);
+} else {
+  liveWaCard.querySelectorAll('.chat-bubble,.chat-meta').forEach(el => el.classList.add('is-visible'));
+}
+ 
+/* =====================================================================
+   8. BACK TO TOP BUTTON VISIBILITY
+   ===================================================================== */
+const backTop = document.getElementById('backTop');
+window.addEventListener('scroll', () => {
+  backTop.style.opacity = window.scrollY > 500 ? '1' : '0.4';
+}, { passive: true });
+ 
+/* =====================================================================
+   9. CONTACT FORM -> WHATSAPP
+   ===================================================================== */
+const contactForm = document.getElementById('contactForm');
+const formSuccess = document.getElementById('formSuccess');
+ 
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+ 
+  const name = document.getElementById('cf-name').value.trim();
+  const phone = document.getElementById('cf-phone').value.trim();
+  const medicine = document.getElementById('cf-medicine').value.trim();
+  const message = document.getElementById('cf-message').value.trim();
+ 
+  if (!name || !phone) {
+    document.getElementById(name ? 'cf-phone' : 'cf-name').focus();
+    return;
+  }
+ 
+  let text = `Hi, I'd like to request medicine support.\n\nName: ${name}\nPhone: ${phone}`;
+  if (medicine) text += `\nMedicine Requirement: ${medicine}`;
+  if (message) text += `\nMessage: ${message}`;
+ 
+  const waUrl = `https://wa.me/${STORE_CONFIG.whatsapp}?text=${encodeURIComponent(text)}`;
+ 
+  formSuccess.classList.add('show');
+  window.open(waUrl, '_blank', 'noopener');
+ 
+  contactForm.reset();
+  setTimeout(() => formSuccess.classList.remove('show'), 6000);
+});
+ 
+/* =====================================================================
+   10. FOOTER YEAR
+   ===================================================================== */
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+ 
 </body>
 </html>
+ 
